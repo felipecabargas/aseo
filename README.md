@@ -14,16 +14,30 @@ Next versions will provide support for more extensions and filetypes ( ** curren
 USAGE
 -----
 
+Execute via terminal: 
+
 ```bash
 $ python aseo.py
 ```
 
+To give a path to realocate files (for example with the Downloads folder):
+
+MacOSX:
+
+```
+Please write the basepath of the files to be ordered: /Users/JohnDoe/Downloads
+````
+
+Linux:
+
+```
+Please write the basepath of the files to be ordered: /home/JohnDoe/Downloads
+````
+
 REQUIREMENTS
 ------------
 
-Works on every platform with Python Interpreter installed
-
-Windows, Mac & Linux Compatible
+UNIX based OS (Windows support will be added in the next version)
 
 LICENSE
 -------
