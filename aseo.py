@@ -52,76 +52,62 @@ if os.path.exists(path_required):
         if extension==img_ext:
             dest_path = path_required+img_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==media_ext:
             dest_path = path_required+media_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==audio_ext:
             dest_path = path_required+audio_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==book_ext:
             dest_path = path_required+book_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==docs_ext:
             dest_path = path_required+docs_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==pdf_ext:
             dest_path = path_required+pdf_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==comp_ext:
             dest_path = path_required+comp_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)
         if extension==app_ext:
             dest_path = path_required+app_path
             if os.path.exists(dest_path):
-                print "Moving"
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
-                print "Moving"
                 shutil.move(or_path, dest_path)                
         else:
-            print extension
+            print "This file cannot be moved. I don't know this extension."
+            
+        print "I finished cleaning this folder. Au revoir!"
 else:
     print "The path given doesn't exists, try another one later."
