@@ -29,14 +29,14 @@ if os.path.exists(path_required):
         
         extension = os.path.splitext(filenames[fileindex])[1]
         
-        img_ext = ".jpg" or ".png" or ".psd" or ".ai" or ".bmp" or ".tiff"
-        media_ext = ".avi" or ".mov" or ".mp4" or ".flv" or ".mpg" or ".mpeg" or ".wmv" or ".rmvb" or ".3gp" or ".mkv" or ".srv"
-        audio_ext = ".mp3" or ".flac" or ".m4a" or ".wav" or ".ogg"
-        book_ext = ".epub" or ".awz" or ".mobi"
-        docs_ext = ".xls" or ".doc" or ".ppt" or ".odt" or ".odf" or ".odp" or ".xlsx" or ".docx" or ".pptx"
-        pdf_ext = ".pdf"
-        comp_ext = ".gz" or ".zip" or ".rar" or ".7z"
-        app_ext = ".exe" or ".msi" or ".deb" or ".rpm" or ".dmg" or ".pkg"
+        img_ext = [".jpg", ".png", ".psd", ".ai", ".bmp", ".tiff"]
+        media_ext = [".avi", ".mov", ".mp4", ".flv", ".mpg", ".mpeg", ".wmv", ".rmvb", ".3gp", ".mkv", ".srv"]
+        audio_ext = [".mp3", ".flac", ".m4a", ".wav", ".ogg"]
+        book_ext = [".epub", ".awz", ".mobi"]
+        docs_ext = [".xls", ".doc", ".ppt", ".odt", ".ods", ".odp", ".xlsx", ".docx", ".pptx"]
+        pdf_ext = [".pdf"]
+        comp_ext = [".gz", ".zip", ".rar", ".7z"]
+        app_ext = [".exe", ".msi", ".deb", ".rpm", ".dmg", ".pkg", ".iso"]
         
         img_path = "/Images"
         media_path = "/Videos"
@@ -49,56 +49,56 @@ if os.path.exists(path_required):
         
         or_path = path_required+"/"+filenames[fileindex]
         
-        if extension==img_ext:
+        if extension in img_ext:
             dest_path = path_required+img_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==media_ext:
+        if extension in media_ext:
             dest_path = path_required+media_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==audio_ext:
+        if extension in audio_ext:
             dest_path = path_required+audio_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==book_ext:
+        if extension in book_ext:
             dest_path = path_required+book_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==docs_ext:
+        if extension in docs_ext:
             dest_path = path_required+docs_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==pdf_ext:
+        if extension in pdf_ext:
             dest_path = path_required+pdf_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==comp_ext:
+        if extension in comp_ext:
             dest_path = path_required+comp_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension==app_ext:
+        if extension in app_ext:
             dest_path = path_required+app_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
@@ -108,6 +108,5 @@ if os.path.exists(path_required):
         else:
             print "This file cannot be moved. I don't know this extension."
             
-        print "I finished cleaning this folder. Au revoir!"
 else:
     print "The path given doesn't exists, try another one later."
