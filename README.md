@@ -1,5 +1,5 @@
 # ASEO - Proudly cleaning your folders for you
-#### v1.0.0     
+#### v1.1.0     
 ___                              
 
 ABOUT
@@ -39,15 +39,26 @@ REQUIREMENTS
 
 UNIX based OS (Windows support will be added in the next version)
 
+CHANGELOG
+---------
+
+[v1.1]
+
+  - Minor bug fixes
+  - Added support for ISO, TAR.GZ and SVG files
+  [NOTE: This version remains being tagged as "unstable" so use carefully and AT YOUR OWN RISK ]
+
+[v1.0] Initial Release
+
 LICENSE
 -------
 
 Copyright (C) 2013  A. Felipe Cabargas M. <felipe.cabargas@gmail.com>
 
    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
