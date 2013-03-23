@@ -46,9 +46,11 @@ CHANGELOG
 
   - Minor bug fixes
   - Added support for ISO, TAR.GZ and SVG files
-  [NOTE: This version remains being tagged as "unstable" so use carefully and AT YOUR OWN RISK ]
+  - [NOTE: This version remains being tagged as "unstable" so use carefully and AT YOUR OWN RISK ]
 
-[v1.0] Initial Release
+[v1.0] 
+
+  - Initial Release
 
 LICENSE
 -------
