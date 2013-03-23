@@ -29,13 +29,13 @@ if os.path.exists(path_required):
         
         extension = os.path.splitext(filenames[fileindex])[1]
         
-        img_ext = [".jpg", ".png", ".psd", ".ai", ".bmp", ".tiff"]
+        img_ext = [".jpg", ".png", ".psd", ".ai", ".bmp", ".tiff", ".svg"]
         media_ext = [".avi", ".mov", ".mp4", ".flv", ".mpg", ".mpeg", ".wmv", ".rmvb", ".3gp", ".mkv", ".srv"]
         audio_ext = [".mp3", ".flac", ".m4a", ".wav", ".ogg"]
         book_ext = [".epub", ".awz", ".mobi"]
-        docs_ext = [".xls", ".doc", ".ppt", ".odt", ".ods", ".odp", ".xlsx", ".docx", ".pptx"]
+        docs_ext = [".xls", ".doc", ".ppt", ".odt", ".ods", ".xlsx", ".docx", ".pptx"]
         pdf_ext = [".pdf"]
-        comp_ext = [".gz", ".zip", ".rar", ".7z"]
+        comp_ext = [".gz", ".zip", ".rar", ".7z", ".tar.gz"]
         app_ext = [".exe", ".msi", ".deb", ".rpm", ".dmg", ".pkg", ".iso"]
         
         img_path = "/Images"
