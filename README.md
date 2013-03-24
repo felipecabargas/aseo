@@ -47,7 +47,7 @@ CHANGELOG
   - Minor bug fixes
   - Added support for ISO, TAR.GZ and SVG files
   - [NOTE 1: This version remains being tagged as "unstable" so use carefully and AT YOUR OWN RISK ]
-  - [NOTE 2: Thanks to Carla Cisternas for finding the bug]
+  - [NOTE 2: Thanks to Carla Cisternas for finding the multiple extensions bug]
 
 [v1.0] 
 
