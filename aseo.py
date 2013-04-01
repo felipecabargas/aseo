@@ -28,15 +28,17 @@ if os.path.exists(path_required):
     for fileindex in range(files_count+1):
         
         extension = os.path.splitext(filenames[fileindex])[1]
-        
-        img_ext = [".jpg", ".png", ".psd", ".ai", ".bmp", ".tiff", ".svg"]
-        media_ext = [".avi", ".mov", ".mp4", ".flv", ".mpg", ".mpeg", ".wmv", ".rmvb", ".3gp", ".mkv", ".srv"]
+        extension = extension.lower()
+
+        img_ext = [".jpg", ".png", ".jpeg", ".psd", ".ai", ".bmp", ".tiff", ".svg", ".gif", ".icns"]
+        media_ext = [".avi", ".mov", ".mp4", ".flv", ".mpg", ".mpeg", ".wmv", ".rmvb", ".3gp", ".mkv", ".srt"]
         audio_ext = [".mp3", ".flac", ".m4a", ".wav", ".ogg"]
         book_ext = [".epub", ".awz", ".mobi"]
         docs_ext = [".xls", ".doc", ".ppt", ".odt", ".ods", ".xlsx", ".docx", ".pptx"]
         pdf_ext = [".pdf"]
         comp_ext = [".gz", ".zip", ".rar", ".7z", ".tar.gz"]
         app_ext = [".exe", ".msi", ".deb", ".rpm", ".dmg", ".pkg", ".iso"]
+        dev_ext = [".py", ".sh", ".rb", ".sql", ".c", ".html", ".css", ".md", ".swf"]
         
         img_path = "/Images"
         media_path = "/Videos"
@@ -46,6 +48,7 @@ if os.path.exists(path_required):
         pdf_path = "/PDFs"
         comp_path = "/CompressedFolders"
         app_path = "/ApplicationInstallers"
+        dev_path = "/Developer"
         
         or_path = path_required+"/"+filenames[fileindex]
         
@@ -56,50 +59,57 @@ if os.path.exists(path_required):
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in media_ext:
+        elif extension in media_ext:
             dest_path = path_required+media_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in audio_ext:
+        elif extension in audio_ext:
             dest_path = path_required+audio_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in book_ext:
+        elif extension in book_ext:
             dest_path = path_required+book_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in docs_ext:
+        elif extension in docs_ext:
             dest_path = path_required+docs_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in pdf_ext:
+        elif extension in pdf_ext:
             dest_path = path_required+pdf_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in comp_ext:
+        elif extension in comp_ext:
             dest_path = path_required+comp_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)
-        if extension in app_ext:
+        elif extension in app_ext:
             dest_path = path_required+app_path
+            if os.path.exists(dest_path):
+                shutil.move(or_path, dest_path)
+            else:
+                os.mkdir(dest_path)
+                shutil.move(or_path, dest_path)                
+        elif extension in dev_ext:
+            dest_path = path_required+dev_path
             if os.path.exists(dest_path):
                 shutil.move(or_path, dest_path)
             else:
