@@ -12,6 +12,15 @@ Actually it supports most common file extensions for most common filetypes (Audi
 
 Next versions will provide support for more extensions and filetypes ( ** currently working on that ** ).
 
+EASY DOWNLOAD
+-----
+
+To download ASEO quickly via terminal:
+
+```bash
+$ curl -O https://raw.github.com/felipecabargas/aseo/master/aseo.py
+```
+
 USAGE
 -----
 
