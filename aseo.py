@@ -8,49 +8,49 @@ import os
 import re
 import shutil
 
-welcome = "(Re)Arrange files on folders by extension - by @juanpintoduran"
+welcome = '(Re)Arrange files on folders by extension - by @juanpintoduran'
 print welcome
 
-note = "NOTE: Subtitle files founded will be rearranged with video files"
+note = 'NOTE: Subtitle files founded will be rearranged with video files'
 print note
 
-path_required = raw_input("Please write the basepath of the files to be ordered: ")
+path_required = raw_input('Please write the basepath of the files to be ordered: ')
 
 if os.path.exists(path_required):
-    print "Looking on the path", "\n"
+    print 'Looking on the path', '\n'
     filenames = os.listdir(path_required)
     
-    print "Counting files under:", path_required
-    files_count = len([item for item in os.listdir(path_required) if os.path.isfile(os.path.join(path_required, item))])
+    print 'Counting files under:', path_required
+    files_count = len([item for item in os.listdir(path_required) if os.path.join(path_required, item)])
     
-    print files_count, "files found. Looking each file extension", "\n"
+    print files_count, 'files found. Looking each file extension', '\n'
     
-    for fileindex in range(files_count+1):
+    for fileindex in range(files_count):
         
-        extension = os.path.splitext(filenames[fileindex])[1]
-        extension = extension.lower()
+        extension = os.path.splitext(filenames[fileindex])
+        extension = extension[1].lower()
 
-        img_ext = [".jpg", ".png", ".jpeg", ".psd", ".ai", ".bmp", ".tiff", ".svg", ".gif", ".icns"]
-        media_ext = [".avi", ".mov", ".mp4", ".flv", ".mpg", ".mpeg", ".wmv", ".rmvb", ".3gp", ".mkv", ".srt"]
-        audio_ext = [".mp3", ".flac", ".m4a", ".wav", ".ogg"]
-        book_ext = [".epub", ".awz", ".mobi"]
-        docs_ext = [".xls", ".doc", ".ppt", ".odt", ".ods", ".xlsx", ".docx", ".pptx"]
-        pdf_ext = [".pdf"]
-        comp_ext = [".gz", ".zip", ".rar", ".7z", ".tar.gz"]
-        app_ext = [".exe", ".msi", ".deb", ".rpm", ".dmg", ".pkg", ".iso"]
-        dev_ext = [".py", ".sh", ".rb", ".sql", ".c", ".html", ".css", ".md", ".swf"]
+        img_ext = ['.jpg', '.png', '.jpeg', '.psd', '.ai', '.bmp', '.tiff', '.svg', '.gif', '.icns']
+        media_ext = ['.avi', '.mov', '.mp4', '.flv', '.mpg', '.mpeg', '.wmv', '.rmvb', '.3gp', '.mkv', '.srt']
+        audio_ext = ['.mp3', '.flac', '.m4a', '.wav', '.ogg']
+        book_ext = ['.epub', '.awz', '.mobi']
+        docs_ext = ['.xls', '.doc', '.ppt', '.odt', '.ods', '.xlsx', '.docx', '.pptx']
+        pdf_ext = ['.pdf']
+        comp_ext = ['.gz', '.zip', '.rar', '.7z', '.tar.gz']
+        app_ext = ['.exe', '.msi', '.deb', '.rpm', '.dmg', '.pkg', '.iso']
+        dev_ext = ['.py', '.sh', '.rb', '.sql', '.c', '.html', '.css', '.md', '.swf']
         
-        img_path = "/Images"
-        media_path = "/Videos"
-        audio_path = "/Audio"
-        book_path = "/Books"
-        docs_path = "/Documents"
-        pdf_path = "/PDFs"
-        comp_path = "/CompressedFolders"
-        app_path = "/ApplicationInstallers"
-        dev_path = "/Developer"
+        img_path = '/Images'
+        media_path = '/Videos'
+        audio_path = '/Audio'
+        book_path = '/Books'
+        docs_path = '/Documents'
+        pdf_path = '/PDFs'
+        comp_path = '/CompressedFolders'
+        app_path = '/ApplicationInstallers'
+        dev_path = '/Developer'
         
-        or_path = path_required+"/"+filenames[fileindex]
+        or_path = path_required+'/'+filenames[fileindex]
         
         if extension in img_ext:
             dest_path = path_required+img_path
@@ -116,7 +116,7 @@ if os.path.exists(path_required):
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)                
         else:
-            print "This file cannot be moved. I don't know this extension."
+            print 'null',
             
 else:
-    print "The path given doesn't exists, try another one later."
+    print 'The path given does not exists, try another one later.'
