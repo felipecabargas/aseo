@@ -8,10 +8,10 @@ import os
 import re
 import shutil
 
-welcome = '(Re)Arrange files on folders by extension - by @juanpintoduran'
+welcome = 'ASEO: Proudly cleaning your files for you. - by @juanpintoduran'
 print welcome
 
-note = 'NOTE: Subtitle files founded will be rearranged with video files'
+note = 'NOTE: Subtitle files founded will be rearranged with video files.'
 print note
 
 path_required = raw_input('Please write the basepath of the files to be ordered: ')
@@ -23,7 +23,7 @@ if os.path.exists(path_required):
     print 'Counting files under:', path_required
     files_count = len([item for item in os.listdir(path_required) if os.path.join(path_required, item)])
     
-    print files_count, 'files found. Looking each file extension', '\n'
+    print files_count, 'files & folders found. Looking each file extension', '\n'
     
     for fileindex in range(files_count):
         
@@ -116,7 +116,10 @@ if os.path.exists(path_required):
                 os.mkdir(dest_path)
                 shutil.move(or_path, dest_path)                
         else:
-            print 'null',
+            if filenames[fileindex][0]==".":
+                print "dotfile","|",
+            else:
+                print filenames[fileindex],"|",
             
 else:
     print 'The path given does not exists, try another one later.'
