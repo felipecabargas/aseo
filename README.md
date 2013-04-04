@@ -1,6 +1,6 @@
 # ASEO - Proudly cleaning your folders for you
 ### "Assigning Stuff (by) Extensions" Organizer
-#### v2.0.10     
+#### v2.0.30     
 ___                              
 
 ABOUT
@@ -35,13 +35,13 @@ To give a path to realocate files (for example with the Downloads folder):
 MacOSX:
 
 ```
-Please write the basepath of the files to be ordered: /Users/JohnDoe/Downloads
+/Users/JohnDoe/Downloads
 ````
 
 Linux:
 
 ```
-Please write the basepath of the files to be ordered: /home/JohnDoe/Downloads
+/home/johndoe/Downloads
 ````
 
 REQUIREMENTS
@@ -51,6 +51,13 @@ UNIX based OS (Windows support will be added in the next version)
 
 CHANGELOG
 ---------
+
+[v2.0]
+
+  - Minor bug fixes
+  - Added support for OD Formats
+  - New output for files not recognized by the program
+  - [NOTE 1: dotfiles will show 'dotfile' entry on the last output line, if you wanna keep information secure please encrypt the files and do not use '.files'] 
 
 [v1.1]
 
