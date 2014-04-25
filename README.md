@@ -1,7 +1,7 @@
 # ASEO - Proudly cleaning your folders for you
 ### "Assigning Stuff (by) Extensions" Organizer
-#### v2.0.30     
-___                              
+#### v2.1.0
+___
 
 ABOUT
 -----
@@ -24,7 +24,7 @@ $ curl -O https://raw.github.com/felipecabargas/aseo/master/aseo.py
 USAGE
 -----
 
-Execute via terminal: 
+Execute via terminal:
 
 ```bash
 $ python aseo.py
@@ -52,21 +52,26 @@ UNIX based OS (Windows support will be added in the next version)
 CHANGELOG
 ---------
 
+[v2.1]
+
+  - Minor bug fixes
+  - Better implementation of the files scanner
+  - Removed dotfile marks on output
+
 [v2.0]
 
   - Minor bug fixes
   - Added support for OD Formats
   - New output for files not recognized by the program
-  - [NOTE 1: dotfiles will show 'dotfile' entry on the last output line, if you wanna keep information secure please encrypt the files and do not use '.files'] 
+  - [NOTE 1: dotfiles will show 'dotfile' entry on the last output line, if you wanna keep information secure please encrypt the files and do not use '.files']
 
 [v1.1]
 
   - Minor bug fixes
   - Added support for ISO, TAR.GZ and SVG files
   - [NOTE 1: This version remains being tagged as "unstable" so use carefully and AT YOUR OWN RISK ]
-  - [NOTE 2: Thanks to Carla Cisternas for finding the multiple extensions bug]
 
-[v1.0] 
+[v1.0]
 
   - Initial Release
 
