@@ -2,7 +2,6 @@
 # 2013 - 2014 | by A. Felipe Cabargas <felipe@cabargas.com>
 # This program was published under GPL 3 License
 # Please visit http://aseo.cabargas.com/ for more info about this program.
-# Beta Release ! Use at your own risk
 
 import os
 import re
@@ -35,16 +34,17 @@ if os.path.exists(path_required):
 		img_ext = ['.jpg', '.png', '.jpeg', '.psd', '.ai', '.bmp', '.tiff', '.svg', '.gif', '.icns']
 		media_ext = ['.avi', '.mov', '.mp4', '.flv', '.mpg', '.mpeg', '.wmv', '.rmvb', '.3gp', '.mkv', '.srt']
 		audio_ext = ['.mp3', '.flac', '.m4a', '.wav', '.ogg']
-		book_ext = ['.epub', '.awz', '.mobi']
+		book_ext = ['.epub', '.awz', '.mobi', '.ibooks']
 		docs_ext = ['.xls', '.doc', '.ppt', '.odt', '.ods', '.xlsx', '.docx', '.pptx']
 		pdf_ext = ['.pdf']
-		comp_ext = ['.gz', '.zip', '.rar', '.7z', '.tar.gz']
-		app_ext = ['.exe', '.msi', '.deb', '.rpm', '.dmg', '.pkg', '.iso']
+		comp_ext = ['.gz', '.zip', '.rar', '.7z', '.tar.gz', '.tgz']
+		app_ext = ['.exe', '.msi', '.deb', '.rpm', '.dmg', '.pkg', '.iso', '.app', '.apk', '.img']
 		dev_ext = ['.py', '.sh', '.rb', '.sql', '.c', '.html', '.css', '.md', '.swf', '.h', '.js', '.java', '.xml', '.yml']
 		txt_ext = ['.txt']
+		font_ext = ['.ttf', '.otf']
 
-		av_exts = [img_ext, media_ext, audio_ext, book_ext, docs_ext, pdf_ext, comp_ext, app_ext, dev_ext, txt_ext]
-		av_exts_folders = ['/Images', '/Videos', '/Audio', '/Books', '/Documents', '/PDFs', '/CompressedFolders', '/ApplicationInstallers', '/Developer', '/PlainText']
+		av_exts = [img_ext, media_ext, audio_ext, book_ext, docs_ext, pdf_ext, comp_ext, app_ext, dev_ext, txt_ext, font_ext]
+		av_exts_folders = ['/Images', '/Videos', '/Audio', '/Books', '/Documents', '/PDFs', '/CompressedFolders', '/AppInstallers', '/Developer', '/PlainText', '/Fonts']
 
 		or_path = path_required+'/'+filenames[fileindex]
 

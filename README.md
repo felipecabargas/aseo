@@ -1,6 +1,6 @@
 # ASEO - Proudly cleaning your folders for you
 ### "Assigning Stuff (by) Extensions" Organizer
-#### v2.1.0
+#### v2.2.0
 ___
 
 ABOUT
@@ -51,6 +51,15 @@ UNIX based OS (Windows support will be added in the next version)
 
 CHANGELOG
 ---------
+
+[v2.2]
+
+  - Out of Beta !
+  - Add support for multiple extensions:
+      - E-Books: .ibooks
+      - Compressed: .tgz
+      - Installers: .apk, .app, .img
+  - Add support for Font files
 
 [v2.1]
 
